@@ -1,0 +1,45 @@
+﻿/*----------- notice-grey -------------*/
+.notice-grey{
+	background: rgba(40,40,40,0.5);
+	font-family: $font-assistant;
+	margin-left: -30px;
+	padding: 10px 0 10px 30px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+
+	&__icon{
+		margin-bottom: 5px;
+	}
+
+	&__title{
+		@include font(normal, bold, 20px, 22px, #fff);
+	}
+
+	&__label{
+		@include font(normal, 600, 14px, 16px, rgba(255,255,255,0.8));
+	}
+
+	&__close{
+		font-family: $font-arial;
+		@include font(normal, normal, 20px, 20px, #fff);
+		text-decoration: none;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	&__close:hover{
+		color: $color-text;
+	}
+
+	&--long{
+		width: 395px;
+		text-align: right;
+	}
+
+	&--long &__title,
+	&--long &__label{
+		display: inline-flex;
+	}
+}

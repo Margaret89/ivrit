@@ -1,0 +1,67 @@
+﻿/*----------- form-site -------------*/
+.form-site{
+	padding: 39px 30px;
+	font-family: $font-assistant;
+	background: #fff;
+
+	&__text{
+		@include font(normal, 600, 14px, 16px, $color-text);
+		margin-bottom: 10px  ;
+	}
+
+	&__fields-wrap{
+		display: flex;
+	}
+
+	&__field{
+		display: flex;
+		margin-bottom: 17px;
+	}
+
+	&__label{
+		@include font(normal, 600, 18px, 29px, $color-text);
+		margin-bottom: 0;
+		border-bottom: 1px solid rgba(40,40,40,0.2);
+		padding-left: 32px;
+	}
+
+	&__fields-wrap &__field:not(:first-child) &__label{
+		padding-right: 40px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		height: 30px;
+		width: 100%;
+		min-width: 0;
+		outline: none;
+		border: 0;
+		border-bottom: 1px solid rgba(40,40,40,0.2);
+		border-radius: 0;
+		background: transparent;
+		@include font(normal, normal, 18px, 30px, #6d6d6d);
+		padding: 0;
+	}
+
+	textarea{
+		height: 150px;
+	}
+
+	&__btn{
+		display: flex;
+		justify-content: space-around;
+		margin-top: 6px;
+	}
+
+// 	input[type="text"]::placeholder,
+// 	input[type="email"]::placeholder,
+// 	textarea::placeholder{
+// 		color: $color-grey;
+// 	}
+
+// 	.btn{
+// 		width: 100%;
+// 	}
+
+}

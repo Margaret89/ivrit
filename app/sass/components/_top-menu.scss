@@ -1,0 +1,138 @@
+﻿/*----------- top-menu -------------*/
+.top-menu{
+	padding: 5px 0;
+	margin: 0;
+	list-style: none;
+	font-family: $font-assistant;
+
+	ul,
+	li{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+	}
+
+	& &__item{
+		padding: 0 26px;
+	}
+
+	& &__item:first-child{
+		padding-right: 0;
+	}
+
+	& &__item:last-child{
+		padding-left: 0;
+	}
+
+	&__item{
+		position: relative;
+	}
+
+	&__item,
+	&__link{
+		@include font(normal, 600, 20px, 24px, $color-text);
+		text-decoration: none;
+	}
+
+	&__link{
+		display: inline-block;
+		padding: 0 16px;
+		border-radius: 2px;
+		position: relative;
+	}
+
+	&__item--arr &__link::before{
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 5px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px  -50px;
+		position: absolute;
+		@include top-center;
+		left: 15px;
+		margin-top: 2px;
+	}
+
+	& &__item--arr{
+		padding-left: 12px;
+	}
+
+	&__item--arr &__link{
+		padding-left: 30px;
+	}
+
+	&__link.current{
+		font-weight: 800;
+	}
+
+	&__item:hover &__link{
+		font-weight: bold;
+	}
+
+	&__item--arr:hover &__link{
+		background: $color-text;
+		font-weight: 800;
+		color: #fff;
+	}
+
+	&__item--arr:hover &__link::before{
+		background-position: -35px -50px;
+	}
+
+	&__item:not(:last-child){
+		border-left: 1px solid #d3d3d3;
+	}
+
+	&__sub{
+		display: none;
+		width: 186px;
+		background: #fff;
+		border: 1px solid #7e7e7e;
+		box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+		position: absolute;
+		top: 100%;
+		right: 0;
+		z-index: 10;
+	}
+
+	& &__sub{
+		padding: 20px 20px 27px;
+	}
+
+	&__sub::before{
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 8px 8px 8px;
+		border-color: transparent transparent #fff transparent;
+		position: absolute;
+		top: -8px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__item:hover &__sub{
+		display: block;
+	}
+
+	&__sub-item,
+	&__sub-link{
+		@include font(normal, 600, 16px, 22px, $color-text);
+		text-decoration: none;
+	}
+
+	& &__sub-item:not(:last-child){
+		margin-bottom: 10px;
+	}
+
+	&__sub-link:hover{
+		font-weight: bold;
+	}
+}

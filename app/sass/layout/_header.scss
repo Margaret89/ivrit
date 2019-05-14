@@ -1,0 +1,119 @@
+/*-------------- Header -----------------*/
+.header-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 10px 0 8px;
+}
+
+.header-user{
+	&__icon{
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px  -5px;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	&__icon:hover{
+		background-color: rgba(88,179,45,0.21);
+	}
+}
+
+.header-middle{
+	display: flex;
+	justify-content: space-between;
+
+	&__auth{
+		width: 173px;
+		margin-right: 67px;
+	}
+
+	.top-menu{
+		width: calc(100% - 555px);
+	}
+}
+
+.header-delivery{
+	width: 285px;
+	margin-right: -30px;
+	margin-left: 67px;
+	position: relative;
+
+	&__head{
+		height: 33px;
+		background: #282828;
+		border: 2px solid #282828;
+		padding: 0 43px;
+		font-family: $font-arial;
+		@include font(normal, normal, 13px, 28px, rgba(255,255,255,0.65));
+		cursor: pointer;
+		position: relative;
+	}
+
+	&__head::before{
+		content: '';
+		display: inline-block;
+		width: 12px;
+		height: 17px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -70px;
+		position: absolute;
+		@include top-center;
+		right: 26px;
+	}
+
+	&__city{
+		font-size: 15px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	&:hover &__head{
+		border-color: $color-green-light;
+	}
+
+	&:hover &__head::after{
+		content: '';
+		display: inline-block;
+		width: 14px;
+		height: 8px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -100px;
+		position: absolute;
+		@include top-center;
+		left: 20px;
+	}
+
+	&__form{
+		position: absolute;
+		top: 33px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 100%;
+		z-index: 10;
+	}
+}
+
+.header-bottom{
+	display: flex;
+	justify-content: flex-end;
+	min-height: 240px;
+
+	&__notice{
+		width: 173px;
+		margin-right: 67px;
+		position: relative;
+	}
+
+	.notice-grey--long{
+		position: absolute;
+		top: 200px;
+		left: 0;
+	}
+
+	&__slider{
+		width: calc(100% - 555px);
+	}
+}

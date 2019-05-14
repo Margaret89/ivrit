@@ -1,0 +1,195 @@
+﻿html,
+body{
+	background: #eeeeee;
+	font-family: $font-assistant;
+	@include font(normal, normal, 13px, 18px, $color-text);
+	box-sizing:border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img{
+	max-width: 100%;
+}
+
+a{
+	color: $color-green;
+}
+
+a:hover,
+a:active,
+a:focus{
+	text-decoration: none;
+}
+
+p{
+	font-family: $font-assistant;
+	@include font(normal, normal, 13px, 18px, $color-text);
+	padding: 5px 0;
+}
+
+h1,
+.h1{
+	font-family: $font-assistant;
+	@include font(normal, bold, 32px, 40px, $color-text);
+	margin-bottom: 40px;
+}
+
+h2,
+.h2{
+	font-family: $font-assistant;
+	@include font(normal, bold, 25px, 30px, $color-text);
+	margin-bottom: 20px;
+}
+
+h3,
+.h3{
+	font-family: $font-assistant;
+	@include font(normal, bold, 20px, 24px, $color-text);
+	margin-bottom: 10px;
+}
+
+h4,
+.h4{
+	font-family: $font-assistant;
+	@include font(normal, normal, 20px, 24px, $color-text);
+	margin-bottom: 10px;
+}
+
+h5,
+.h5{
+	font-family: $font-assistant;
+	@include font(normal, bold, 18px, 22px, $color-text);
+	margin-bottom: 0;
+}
+
+h6,
+.h6{
+	font-family: $font-assistant;
+	@include font(normal, normal, 18px, 22px, $color-text);
+	margin-bottom: 0;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+
+	&--img{
+		background: url(#{$path-img}/bg_flower.png) no-repeat center top;
+	}
+
+	&::before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background: rgba(255,255,255,0.5);
+		background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.5)), color-stop(0%, rgba(255,255,255,0.5)), color-stop(100%, rgba(255,255,255,0)));
+		background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+		background: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+		background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+	}
+}
+
+.st-width-full{
+	width: 1502px;
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+header,
+main,
+footer{
+	position: relative;
+}
+
+main{
+	flex: 1;
+	padding-bottom: 100px;
+}
+
+.btn,
+input[type="submit"].btn{
+	display: inline-block;
+	height: 32px;
+	background: $color-green;
+	border: 1px solid $color-green;
+	outline: 0;
+	font-family: $font-assistant;
+	@include font(normal, bold, 15px, 30px, #fff);
+	padding: 0 22px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.btn:hover,
+input[type="submit"].btn:hover{
+	background: $color-green-dark;
+}
+
+.btn--border,
+input[type="submit"].btn--border{
+	background: transparent;
+	border-color: #7a7a78;
+	font-weight: 600;
+	color: $color-text;
+	padding: 0 20px;
+}
+
+.btn--border:hover,
+input[type="submit"].btn--border:hover{
+	background: $color-text;
+	border-color: $color-text;
+	color: #fff;
+}
+
+.btn--white,
+input[type="submit"].btn--white{
+	background: transparent;
+	border-color: #fff;
+	font-weight: 600;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.btn--white:hover,
+input[type="submit"].btn--white:hover{
+	background: #fff;
+	color: $color-text;
+}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.h-text-left{text-align: left !important;}
+.h-text-center{text-align: center !important;}
+.h-text-right{text-align: right !important;}
+.h-text-justify{text-align: justify !important;}
+.h-text-uppercase{text-transform: uppercase !important;}
+.h-text-bold {font-weight: 700 !important;}

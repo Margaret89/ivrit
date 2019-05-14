@@ -1,0 +1,14 @@
+﻿/*----------- auth -------------*/
+.btn-auth{
+	background: $color-orange;
+	min-height: 27px;
+	font-family: $font-assistant;
+	padding: 0 5px;
+	text-align: center;
+
+	&,
+	a{
+		@include font(normal, bold, 16px, 25px, rgba(255,255,255,0.8));
+		text-decoration: none;
+	}
+}
